@@ -70,8 +70,10 @@ if len(sys.argv) != 2:
 
 gtime = Gtime('d650e07040973887da54e3a7abfb424930575f97', sys.argv[1])
 if gtime.executeQuery():
+	print("\n")
 	print('\033[1m' + '\033[92m' + gtime.getLocation() + '\033[0m')
 	print('  \033[94m' + gtime.getLocalTime() + '\033[0m')
+	print("\n")
 	exit(0)
 else:
 	print("\033[91mSorry there was an error in processing your request" + '\033[0m')
